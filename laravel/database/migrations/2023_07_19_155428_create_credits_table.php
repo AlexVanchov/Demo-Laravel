@@ -15,6 +15,10 @@ class CreateCreditsTable extends Migration
     {
         Schema::create('credits', function (Blueprint $table) {
             $table->id();
+            $table->string('credit_recipient');
+            $table->decimal('amount', 10, 2);
+            $table->integer('term_months');
+            $table->decimal('remaining_amount', 10, 2);
             $table->timestamps();
         });
     }
